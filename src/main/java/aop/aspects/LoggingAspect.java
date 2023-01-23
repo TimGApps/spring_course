@@ -1,5 +1,6 @@
 package aop.aspects;
 
+
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
@@ -13,7 +14,7 @@ public class LoggingAspect {
         System.out.println("beforeGetBookAdvice: попытка получить книгу");
     }
 
-    @Before("execution(public * returnBook())")
+    @Before("execution(* returnBook())")
     public void beforeReturnBookAdvice() {
         System.out.println("beforeReturnBookAdvice: попытка вернуть книгу книгу");
     }
